@@ -1,89 +1,70 @@
-package ch5;
+package ch05;
 
 import java.util.Scanner;
 
 public class Ex5_16 {
-	public static void main (String[] args)
-	{
-		Scanner scan = new Scanner (System.in);
-		System.out.println("Enter 5 number between 1 and 30");
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x1,x2,x3,x4,x5;
+		Scanner input = new Scanner(System.in);
 		
-		
-		System.out.print("First number:");
-		int input1 = scan.nextInt();
-		if(input1 >=1 && input1 <= 30){
-			
-		}
-		else{
-			System.out.println("Wrong input. Exiting...");
-			System.exit(0);
+		System.out.print("Enter first number between 1 and 30: ");
+		x1 = input.nextInt();
+		while(x1 < 1 && x1 > 30){
+			System.out.print("Wrong input.Enter first number (1-30): ");
+			x1 = input.nextInt();
 		}
 		
-		System.out.print("Second number:");
-		int input2 = scan.nextInt();
-		if(input2 >=1 && input2 <= 30){
-			
-		}
-		else{
-			System.out.println("Wrong input. Exiting...");
-			System.exit(0);
+		System.out.print("Enter second number between 1 and 30: ");
+		x2 = input.nextInt();
+		while(x2 < 1 && x2 > 30){
+			System.out.print("Wrong input.Enter second number (1-30): ");
+			x2 = input.nextInt();
 		}
 		
-		System.out.print("Third number:");
-		int input3 = scan.nextInt();
-		if (input3 >=1 && input3 <= 30){
-			
-		}
-		else{
-			System.out.println("Wrong input. Exiting...");
-			System.exit(0);
+		System.out.print("Enter third number between 1 and 30: ");
+		x3 = input.nextInt();
+		while(x3 < 1 && x3 > 30){
+			System.out.print("Wrong input.Enter third number (1-30): ");
+			x3 = input.nextInt();
 		}
 		
-		System.out.print("Fourth number:");
-		int input4 = scan.nextInt();
-		if(input4 >=1 && input4 <= 30){
-			
-		}
-		else{
-			System.out.println("Wrong input. Exiting...");
-			System.exit(0);
+		System.out.print("Enter fourth number between 1 and 30: ");
+		x4 = input.nextInt();
+		while(x4 < 1 && x4 > 30){
+			System.out.print("Wrong input.Enter fourth number (1-30): ");
+			x4 = input.nextInt();
 		}
 		
-		System.out.print("Fifth number:");
-		int input5 = scan.nextInt();
-		if(input5 >=1 && input5 <= 30) {
-		}
-		else{
-			System.out.println("Wrong input. Exiting...");
-			System.exit(0);
+		System.out.print("Enter fifth number between 1 and 30: ");
+		x5 = input.nextInt();
+		while(x5 < 1 && x5 > 30){
+			System.out.print("Wrong input.Enter second number (1-30): ");
+			x5 = input.nextInt();
 		}
 		
-		//printing out the asterisk based on input
-		for(int i = 0; i < input1; i++){
+		for(int i = 0; i < x1; i++)
 			System.out.print("*");
-		}
-		System.out.println("");
+		System.out.println();
 		
-		for(int i = 0; i < input2; i++){
+		for(int i = 0; i < x2; i++)
 			System.out.print("*");
-		}
-		System.out.println("");
+		System.out.println();
 		
-		for(int i = 0; i < input3; i++){
+		for(int i = 0; i < x3; i++)
 			System.out.print("*");
-		}
-		System.out.println("");
+		System.out.println();
 		
-		for(int i = 0; i < input4; i++){
+		for(int i = 0; i < x4; i++)
 			System.out.print("*");
-		}
-		System.out.println("");
+		System.out.println();
 		
-		for(int i = 0; i < input5; i++){
+		for(int i = 0; i < x5; i++)
 			System.out.print("*");
-		}
+		System.out.println();
 		
-		scan.close();
+		input.close();
 	}
 
 }
