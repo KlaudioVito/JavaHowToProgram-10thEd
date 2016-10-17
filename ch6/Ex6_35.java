@@ -1,34 +1,37 @@
-package ch6;
+package ch06;
+
 import java.security.SecureRandom;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
+
 public class Ex6_35 {
-	public static int prod, input;
-	public static void askQuestion(){
-		SecureRandom randomNumbers = new SecureRandom();
-		int num1, num2;
-		num1 = 1 + randomNumbers.nextInt(10);
-		num2 = 1 + randomNumbers.nextInt(10);
-		prod = num1 * num2;
-		input = Integer.parseInt(JOptionPane.showInputDialog(null, ("How much is " + num1 + " * " + num2)));
-	}
 
-	public static void main (String[] args){
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int result, choice = 1, answer;
+		Scanner input = new Scanner(System.in);
+		SecureRandom random = new SecureRandom();
 		
-		
-		boolean correct = false;
-		while (!correct){
-			askQuestion();
-			if(input == prod){
-				JOptionPane.showMessageDialog(null, ("Very good!"));
-				askQuestion();
-				correct = true;
+		while(choice == 1){
+			int x = 1 + random.nextInt(8);
+			int y = 1 + random.nextInt(8);
+			result = askQuestion(x,y);
+			System.out.print("\nHow much is " + x + " * " + y + "? ");
+			answer = input.nextInt();
+			while(answer != result){
+				System.out.println("\nNo. Please try again.");
+				System.out.print("How much is " + x + " * " + y + "? ");
+				answer = input.nextInt();
 			}
-			else{
-				JOptionPane.showMessageDialog(null, "No. Try again!");
-				correct = false;
-			}
+			System.out.println("\nVery good!");
+			System.out.print("Enter 1 for the next question or any other number to exit: ");
+			choice = input.nextInt();
 		}
-
+		
+		System.out.println("Goodbye!");
+		input.close();
 	}
-
+	
+	private static int askQuestion(int x, int y){
+		return x*y;
+	}
 }
